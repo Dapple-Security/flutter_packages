@@ -115,9 +115,10 @@ class PathProviderWindows extends PathProviderPlatform {
     }
   }
 
+  /// This path is overridden to point to LOCAL app data.
   @override
   Future<String?> getApplicationSupportPath() =>
-      _createApplicationSubdirectory(WindowsKnownFolder.RoamingAppData);
+      _createApplicationSubdirectory(WindowsKnownFolder.LocalAppData);
 
   @override
   Future<String?> getApplicationDocumentsPath() =>
